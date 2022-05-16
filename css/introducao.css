@@ -3,7 +3,7 @@
   padding: 40px 20px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 2fr ;
+  grid-template-columns: 1fr 2fr;
   gap: 100px;
   align-items: center;
 }
@@ -25,14 +25,45 @@
   top: -15px;
   left: -40px;
   z-index: -1;
-
 }
 
-.introducaop {
+.introducao p {
   font-size: 1.5rem;
   color: #525252;
 }
 
 .introducao img {
   border-radius: 100px;
+}
+
+@media (max-width: 1000px) {
+  .introducao h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .introducao h1 {
+    font-size: 2rem;
+  }
+
+  .introducao h1::before {
+    width: 30px;
+    height: 10px;
+    left: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  introducao img {
+    grid-template-columns: 1fr;
+  }
+
+  .introducao img {
+    display: none;
+  }
 }
